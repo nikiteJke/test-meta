@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница авторизации</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+    <div class="visible auth__form">
+        <h2 class="auth__title">Регистрация</h2>
+
+        <form method="POST">
+            <div class="user__box">
+                <input type="text" name="login" id="login" class="input__login" pattern="[A-Za-z]{6,}^[ 0-9]+$">
+                <label for="login">Логин</label>
+            </div>
+
+            <div class="user__box">
+                <input type="email" name="email" id="email" class="input__email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                <label for="email">Email</label>
+            </div>
+
+            <div class="user__box">
+                <input type="tel" name="tel" id="tel" class="input__tel" pattern="[+]7\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}">
+                <label for="tel">Телефон</label>
+            </div>
+
+            <div class="user__box">
+                <input type="password" name="password" id="password" class="input__password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                <label for="password">Пароль</label>
+            </div>
+
+            <div class="user__box">
+                <input type="password" name="re__password" id="re__password" class="input__re__password">                    
+                <label for="re__password">Подтверждение пароля</label>
+            </div>
+            
+            <input type="submit" class="btn" value="Зарегистрироваться" id="form-submit">
+        </form>
+    </div>
+
+    <div class="unvisible profile__auth__form">
+        <h2 class="profile__auth__title"></h2>
+        <button class="btn btn_out">Выйти</button>
+    </div>
+<script src="/assets/js/signup.js"></script>
+</body>
+</html>
